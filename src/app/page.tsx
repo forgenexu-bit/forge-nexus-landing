@@ -5,7 +5,6 @@ import { GuaranteesGrid } from "@/features/guarantees/components/GuaranteesGrid"
 import { HeroSection } from "@/features/hero/components/HeroSection";
 import { IndustriesGrid } from "@/features/industries/components/IndustriesGrid";
 import { ProcessTimeline } from "@/features/process/components/ProcessTimeline";
-import { DemosGrid } from "@/features/showcase/components/DemosGrid";
 import { TechStackGrid } from "@/features/tech-stack/components/TechStackGrid";
 
 export default function Home() {
@@ -16,7 +15,6 @@ export default function Home() {
       <IndustriesGrid />
       <AiIntegrationAccordion />
       <TechStackGrid />
-      <DemosGrid />
       <ProcessTimeline />
       <GuaranteesGrid />
       <ContactSection />
