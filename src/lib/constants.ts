@@ -14,6 +14,7 @@ export const COMPANY = {
   instagram: "@forgenexu",
   instagramUrl: "https://www.instagram.com/forgenexu",
   website: "www.forgenexus.com",
+  privacyPolicyUrl: "https://aviso-privacidad-five.vercel.app/",
 } as const;
 
 /**

@@ -65,7 +65,18 @@ export function Footer() {
           <span>
             © {year} {COMPANY.name}. Todos los derechos reservados.
           </span>
-          <span>Diseñado y construido por el equipo de Forge Nexus.</span>
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+            <a
+              href={COMPANY.privacyPolicyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ver aviso de privacidad de Forge Nexus"
+              className="transition-colors hover:text-foreground"
+            >
+              Aviso de Privacidad
+            </a>
+            <span>Diseñado y construido por el equipo de Forge Nexus.</span>
+          </div>
         </div>
       </div>
     </footer>
