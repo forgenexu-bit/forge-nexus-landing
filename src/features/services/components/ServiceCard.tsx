@@ -66,12 +66,12 @@ export function ServiceCard({ service, index }: ServiceCardProps) {
         </ul>
 
         <div className="mt-5 flex flex-wrap gap-1.5 border-t border-surface-border pt-4">
-          {service.technologies.slice(0, 5).map((tech) => (
+          {service.highlights.slice(0, 5).map((item) => (
             <span
-              key={tech}
+              key={item}
               className="rounded-md bg-white/[0.03] px-2 py-1 text-[11px] text-muted-foreground"
             >
-              {tech}
+              {item}
             </span>
           ))}
         </div>

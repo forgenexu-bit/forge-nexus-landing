@@ -12,7 +12,7 @@ export const heroCopy = {
   headlineHighlight: "INTELIGENTIZA.",
   subtitle: "Software • Inteligencia Artificial • Automatización • Datos",
   description:
-    "Diseñamos y construimos productos digitales a la medida —web, móvil, backend e IA— con arquitectura limpia y soporte continuo, adaptados al presupuesto real de tu negocio.",
+    "Diseñamos y construimos productos digitales a la medida —web, móvil, sistemas e IA— con soporte de calidad asegurada y evolutiva, adaptados al presupuesto real de tu negocio.",
   primaryCta: "Iniciar un Proyecto",
   secondaryCta: "Ver soluciones",
 };
@@ -24,8 +24,8 @@ interface Differentiator {
 
 export const differentiators: Differentiator[] = [
   { icon: Wallet, label: "Flexibilidad de presupuesto" },
-  { icon: Smartphone, label: "Móvil multiplataforma: Flutter, Dart y Kotlin" },
-  { icon: Layers, label: "Arquitectura limpia y escalable" },
+  { icon: Smartphone, label: "Aplicaciones móviles a la medida para tu negocio" },
+  { icon: Layers, label: "Soporte de calidad asegurada y evolutiva" },
   { icon: ShieldCheck, label: "Mantenimiento y soporte continuo incluido" },
 ];
 

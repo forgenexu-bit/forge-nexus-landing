@@ -50,7 +50,7 @@ const professionalServiceJsonLd = {
   "@type": "ProfessionalService",
   name: COMPANY.name,
   description:
-    "Desarrollo de Software Profesional, Apps Android, Web e Inteligencia Artificial.",
+    "Desarrollo de Software Profesional, Apps Móviles, Web e Inteligencia Artificial.",
   url: siteConfig.url,
   address: {
     "@type": "PostalAddress",

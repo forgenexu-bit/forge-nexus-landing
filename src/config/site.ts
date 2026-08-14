@@ -5,26 +5,26 @@ import { COMPANY } from "@/lib/constants";
  */
 export const siteConfig = {
   name: COMPANY.name,
-  title: "Forge Nexus | Desarrollo de Software, Apps Android e Inteligencia Artificial",
+  title: "Forge Nexus | Desarrollo de Software, Apps Móviles e Inteligencia Artificial",
   description:
-    "Diseñamos y construimos software a la medida en México: Aplicaciones Android nativas, plataformas Web, APIs e Inteligencia Artificial con soporte continuo.",
+    "Diseñamos y construimos sistemas digitales a la medida en México: aplicaciones móviles, sitios web, automatización e Inteligencia Artificial con soporte garantizado.",
   // TODO(lead-dev): cambiar a dominio personalizado cuando esté disponible.
   url: "https://forgenexus.vercel.app",
   ogImage: "/brand/forge-nexus-logo.jpg",
   keywords: [
     "desarrollo de software",
     "inteligencia artificial",
-    "apps Android Kotlin",
-    "aplicaciones móviles nativas",
-    "desarrollo web Next.js",
+    "aplicaciones móviles a la medida",
+    "desarrollo de sitios web profesionales",
     "automatización con IA",
     "software a la medida México",
     "Chiapas",
   ],
   navigation: [
     { label: "Soluciones", href: "#soluciones" },
+    { label: "Industrias", href: "#industrias" },
     { label: "IA", href: "#ia" },
-    { label: "Stack", href: "#stack" },
+    { label: "Tecnología", href: "#stack" },
     { label: "Proceso", href: "#proceso" },
     { label: "Mantenimiento", href: "#mantenimiento" },
     { label: "Contacto", href: "#contacto" },
