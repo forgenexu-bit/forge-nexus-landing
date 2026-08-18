@@ -8,3 +8,14 @@ import { twMerge } from "tailwind-merge";
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
+
+/**
+ * Detecta si el visitante está en un dispositivo Android. Se usa para
+ * decidir si el link de WhatsApp debe dirigirse explícitamente a la app de
+ * Mensajería (ver `buildWhatsappIntentLink` en lib/constants.ts) en vez del
+ * enlace genérico `wa.me`.
+ */
+export function isAndroidDevice() {
+  if (typeof navigator === "undefined") return false;
+  return /Android/i.test(navigator.userAgent);
+}

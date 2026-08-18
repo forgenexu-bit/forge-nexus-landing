@@ -2,7 +2,8 @@
 
 import { Button } from "@/components/ui/Button";
 import { GlassContainer } from "@/components/ui/GlassContainer";
-import { buildWhatsappLink } from "@/lib/constants";
+import { buildWhatsappIntentLink, buildWhatsappLink } from "@/lib/constants";
+import { isAndroidDevice } from "@/lib/utils";
 import { Send } from "lucide-react";
 import { useState, type FormEvent } from "react";
 
@@ -26,6 +27,13 @@ export function ContactForm() {
       .filter(Boolean)
       .join(" ");
 
+    if (isAndroidDevice()) {
+      // El intent:// solo lo resuelve Chrome en navegación de nivel
+      // superior; window.open() lo abriría en una pestaña nueva sin
+      // interpretarlo, así que aquí navegamos directo en vez de abrir tab.
+      window.location.href = buildWhatsappIntentLink(composed);
+      return;
+    }
     window.open(buildWhatsappLink(composed), "_blank", "noopener,noreferrer");
   }
 

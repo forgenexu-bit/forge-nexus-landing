@@ -46,5 +46,22 @@ export function buildWhatsappLink(message: string) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`;
 }
 
+/**
+ * Variante para Android que apunta explícitamente al paquete de WhatsApp
+ * Mensajería (`com.whatsapp`) vía un Android Intent, en vez del enlace
+ * genérico `wa.me` que intercepta indistintamente WhatsApp o WhatsApp
+ * Business. Evita que Android intente abrir Business cuando está instalada
+ * sin sesión iniciada (falla en silencio con el enlace genérico).
+ *
+ * `S.browser_fallback_url` es la salida de emergencia: si el visitante no
+ * tiene WhatsApp Mensajería instalada, Chrome cae de vuelta al enlace
+ * `wa.me` normal en vez de mostrar un enlace roto.
+ */
+export function buildWhatsappIntentLink(message: string) {
+  const encoded = encodeURIComponent(message);
+  const fallback = encodeURIComponent(buildWhatsappLink(message));
+  return `intent://send/?phone=${WHATSAPP_NUMBER}&text=${encoded}#Intent;scheme=https;package=com.whatsapp;S.browser_fallback_url=${fallback};end`;
+}
+
 export const WHATSAPP_DEFAULT_MESSAGE =
   "Hola Forge Nexus, me interesa cotizar un proyecto de...";
