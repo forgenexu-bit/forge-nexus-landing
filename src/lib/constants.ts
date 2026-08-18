@@ -36,13 +36,14 @@ export const SOCIAL_LINKS: { name: string; icon: IconType; url: string }[] = [
   },
 ];
 
-// TODO(lead-dev): reemplazar por el número real de WhatsApp de la empresa
-// (formato E.164, ej. "5219611234567") antes de publicar a producción.
-export const WHATSAPP_NUMBER_PLACEHOLDER = "5210000000000";
+// Número real de WhatsApp de Forge Nexus, formato E.164 (código de país 52 +
+// los 10 dígitos del número, sin el "1" extra que usaba la convención
+// anterior a 2021).
+export const WHATSAPP_NUMBER = "525522501791";
 
 export function buildWhatsappLink(message: string) {
   const encoded = encodeURIComponent(message);
-  return `https://wa.me/${WHATSAPP_NUMBER_PLACEHOLDER}?text=${encoded}`;
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`;
 }
 
 export const WHATSAPP_DEFAULT_MESSAGE =
