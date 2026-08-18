@@ -8,14 +8,11 @@ export const siteConfig = {
   title: "Forge Nexus | Desarrollo de Software, Apps Móviles e Inteligencia Artificial",
   description:
     "Diseñamos y construimos sistemas digitales a la medida en México: aplicaciones móviles, sitios web, automatización e Inteligencia Artificial con soporte garantizado.",
-  // TODO(lead-dev): esta es una URL de despliegue de Vercel con hash
-  // (project-hash-team.vercel.app), no el alias estable del proyecto.
-  // Vercel genera una URL nueva de este tipo en cada deploy salvo que la
-  // fijes como dominio de producción/alias en el dashboard del proyecto —
-  // si no la fijas, este canonical, el sitemap y el robots.txt quedarán
-  // apuntando a una URL que puede dejar de resolver en el próximo deploy.
-  // Cambiar aquí cuando tengas dominio personalizado o alias estable.
-  url: "https://forge-nexus-landing-nt3eel5pg-forge-nexus1.vercel.app",
+  // Alias estable de Production en Vercel (no cambia entre deploys, a
+  // diferencia de las URLs de deployment con hash tipo
+  // project-hash-team.vercel.app). Cambiar aquí cuando tengas dominio
+  // personalizado.
+  url: "https://forge-nexus-landing.vercel.app",
   ogImage: "/brand/forge-nexus-logo.jpg",
   keywords: [
     "desarrollo de software",
