@@ -1,7 +1,7 @@
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
 import { siteConfig } from "@/config/site";
-import { COMPANY } from "@/lib/constants";
+import { COMPANY, SOCIAL_LINKS, WHATSAPP_NUMBER } from "@/lib/constants";
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -21,6 +21,20 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   keywords: [...siteConfig.keywords],
+  authors: [{ name: siteConfig.name, url: siteConfig.url }],
+  creator: siteConfig.name,
+  publisher: siteConfig.name,
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   alternates: {
     canonical: "/",
   },
@@ -59,6 +73,8 @@ const professionalServiceJsonLd = {
     addressCountry: "MX",
   },
   email: COMPANY.email,
+  telephone: `+${WHATSAPP_NUMBER}`,
+  sameAs: SOCIAL_LINKS.map((social) => social.url),
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
